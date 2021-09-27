@@ -1,0 +1,52 @@
+
+.slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+    position: relative;
+    
+    left: 0;
+    
+}
+.image{
+   object-fit: cover;
+    display: block;
+    width: 100vw;
+    height:400px;
+}
+
+.slide{
+    pointer-events: none;
+    opacity: 0;
+    transition:1s ease-out;
+}
+.slide.active{
+    opacity: 1;
+    transition: all 500ms ease-in;
+    max-height: 100%;
+    /* transform: scale(1.05); */
+}
+
+.controls{
+    position: absolute;
+    display: block;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    padding:0 .8em;
+    bottom: 0;
+   
+}
+.controls svg{
+    width: 24px;
+    height: 24px;
+}
+.left-control{
+    top:0;
+    left: 0;
+}
+.right-control{
+    right: 0;
+    top:0;
+}
