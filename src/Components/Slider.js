@@ -2,20 +2,24 @@ import React, { useState } from "react";
 import "../styles/slider.css";
 import {IoChevronBackOutline , IoChevronForwardOutline} from 'react-icons/io5'
 
-import image1 from "../images/Image1.jpg";
-import image2 from "../images/Image2.jpg";
-import image3 from "../images/Image3.jpg";
+
 const data = [
   {
-    image: image1,
+    image: "/allImages/Image1.jpg",
+    tagline:{p1:"Foster your Business",p2:"with our Digital Services"},
+    btnTitle:"Get a proposal",
     slide: 0,
   },
   {
-    image: image2,
+    image: "/allImages/Image2.jpg",
+    tagline:{p1:"If FDS is here,",p2: "then why fear?"},
+    btnTitle:"Limited time offer",
     slide: 1,
   },
   {
-    image: image3,
+    image: "/allImages/Image3.jpg",
+    tagline:{p1:"Once Driven," ,p2:"Forever Digital"},
+    btnTitle:"Get a consultation now",
     slide: 2,
   },
 ];
@@ -49,6 +53,11 @@ function Slider() {
       {data.map((val) => {
         return (
           <div className={val.slide === current ? "slide active" : "slide"}>
+          <div className="image__tagline">
+              <p>{val.tagline.p1}</p>
+              <p>{val.tagline.p2}</p>
+              <button className="slider__btn">{val.btnTitle}</button>
+            </div>
             {val.slide === current && (
               <img className="image" src={val.image} alt="image1"></img>
             )}

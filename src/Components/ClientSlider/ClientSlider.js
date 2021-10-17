@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState, useEffect ,useRef} from "react";
+import {ImQuotesLeft} from 'react-icons/im'
 
+import Slide from "./Slide";
 import "./clientSlider.css";
 
 const clientData = [
@@ -22,18 +24,54 @@ const clientData = [
 ];
 
 function ClientSlider() {
+  const [current, setCurrent] = useState(0);
+  
+  const prev = () => {
+    console.log("clicked");
+    if (current === 0) {
+      setCurrent(clientData.length - 1);
+    } else {
+      setCurrent(current - 1);
+    }
+  };
+  const next = () => {
+    
+    // console.log(current) some how recieving 0 here as state.
+    if (current === clientData.length - 1) setCurrent(0);
+    else setCurrent(current + 1);
+    // at first re-render state was changed to 1 but after that also we were recieving 0  as stated in above line . So react was not updating it 1 again because its same as previous state.
+    // so we need to tell useEffect that state has changed .
+  };
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      next();
+    }, 5000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [current]);
+
   return (
     <div className="slider--container">
-      <div className="slide--container">
-        <h3>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo odit
-          distinctio consequatur similique, totam ipsa. Maiores id tempore
-          ducimus. Delectus sunt deleniti veniam odit ratione explicabo
-          obcaecati nam blanditiis doloribus tempore, repudiandae neque quod
-          voluptatibus qui saepe nulla exercitationem mollitia consectetur nisi.
-          Numquam omnis iste placeat, sit modi cum! Deleniti
-        </h3>
-      </div>
+      <h3>Listen from our clients...</h3>
+
+      {clientData.map((val,index)=>{
+        return (
+        <div className={current===index?"client__slide active":"client__slide"}>
+            {current===index&&(
+              <div className="clientSlider__content">
+              <ImQuotesLeft />
+                <h3>{val.comment}</h3>
+                <img src="" alt="company logo" />
+              </div>
+              )}
+        </div>
+        )
+          
+      })}
+    
+
       <div className="control--dots">
         <div className="dot"></div>
         <div className="dot"></div>

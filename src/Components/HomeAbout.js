@@ -1,11 +1,11 @@
 import React from "react";
 import styles from '../styles/homeAbout.module.css';
-import aboutImage from '../images/info.png'
+
 function HomeAbout() {
   return (
     <div className={styles["home--about--container"]}>
       <div className={styles["home-about-image"]}>
-          <img src={aboutImage} alt="" />
+          <img src="/allImages/info.png" alt="" />
       </div>
       <div className={styles["home--about--content"]}>
         <h3>About Us</h3>

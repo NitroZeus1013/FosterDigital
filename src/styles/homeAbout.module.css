@@ -1,5 +1,5 @@
 .home--about--container{
-    font-size:18px;
+    font-size:14px;
     margin: 1.5em;
     border:2px solid skyblue;
     border-radius: 8px;
@@ -21,7 +21,7 @@
 }
 
 .home--about--button{
-    font-size:18px;
+    font-size:14px;
     padding:.4em .8em;
     margin:.4em;
     border-radius:25px;
@@ -35,15 +35,19 @@
     .home--about--container{
         display: flex;
         justify-content: space-between;
-        font-size:16px;
-        margin: 2.5em 5em;
+        font-size:18px;
+        margin: 2.5em auto;
         border:2px solid skyblue;
         border-radius: 8px;
         padding:2em;
-        
+        max-width: 1000px;
         max-height: 400px;
         
         
+    }
+
+    .home--about--button{
+        font-size: 18px;
     }
     .home-about-image img{
         max-height: 100%;

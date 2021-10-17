@@ -1,6 +1,6 @@
 import React from 'react'
 import { GiDesert } from 'react-icons/gi';
-import seo from '../../images/SEO.jpg';
+
 import './card.css';
 
 function Card({image,logo,title,description,action}) {
@@ -10,14 +10,16 @@ function Card({image,logo,title,description,action}) {
             <img src={image} alt="services images"/>
             </div>
             <div className="card--content">
-                <img src="" alt="logo"  className="card--logo"/>
+                <div className="card--logo">
+                <img src={logo} alt="logo" />
+                </div>
                 <h3 className="card--title">
                     {title}
                 </h3>
                 <p className="card--description">
                     {description}
                 </p>
-                <button className="card--button" onClick={action}>
+                <button className="card--button" >
                     Learn More
                 </button>
             </div>

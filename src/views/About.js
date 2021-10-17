@@ -1,9 +1,10 @@
 import React from 'react'
+import Service from '../Components/Services/Service'
 
 function About() {
     return (
         <div>
-            About page ...
+          
         </div>
     )
 }

@@ -34,7 +34,7 @@ const featureData = [
 function WhyChooseUs() {
   return (
     <div className="feature--main-container">
-        <img src="allImages/hexagon.jpg" alt="background-image" />
+        <img src="allImages/why.jpg" alt="background-image" />
       {featureData.map((feature) => {
         return (
           <Feature

@@ -5,6 +5,7 @@
 #home {
   position: relative;
   visibility: hidden;
+ 
 }
 #home::after {
   visibility: visible;
@@ -15,14 +16,16 @@
   border-radius: 50%;
   /* border: 1px solid; */
   position: absolute;
-  top: -25%;
-  left: -25%;
+  top: 0;
+  right: -95%;
   cursor: pointer;
-
+  border: 5px solid white;
   background: url("../images/FDS-circle.png");
+  background-color: white;
   background-size: 6rem;
   background-repeat: no-repeat;
-  box-shadow: 0 0.5em 1em rgba(70, 68, 68, 0.678);
+  background-blend-mode: darken;
+  box-shadow: 0px 20px 15px 0px rgba(50, 50, 50, 0.75)
 }
 
 #nav-bar a {
@@ -36,7 +39,7 @@
 /* Mobile Navigation starts */
 .mob-nav-bar {
   background-color: white;
-  font-size: 12px;
+  font-size: 14px;
   position: sticky;
   z-index: 1000;
   box-shadow: 0 0.5em 1em rgba(70, 68, 68, 0.678);
@@ -103,10 +106,42 @@
     height: auto;
     width: auto;
   }
+  .nav-bar a{
+    text-decoration: none;
+    color: #494949;
+  }
   .mob-nav-bar{
     display: none;
   }
   .hamb{
     display: none;
+  }
+  #services{
+    position: relative;
+    width: 56px;
+  }
+  .dropdown{
+   height: 0;
+   visibility: hidden;
+   
+  }
+  .active li{
+    
+    margin:.5rem;
+    padding:.5rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.315);
+    
+  }
+  .active{
+    background-color: white;
+    visibility: visible;
+    
+    list-style: none;
+    top:200%;
+    left: -20%;
+    position: absolute;
+    display: block;
+    
+    transition: all 250ms ease-out;
   }
 }
