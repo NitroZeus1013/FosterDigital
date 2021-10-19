@@ -58,7 +58,7 @@ function ClientSlider() {
 
       {clientData.map((val,index)=>{
         return (
-        <div className={current===index?"client__slide active":"client__slide"}>
+        <div key={index} className={current===index?"client__slide active":"client__slide"}>
             {current===index&&(
               <div className="clientSlider__content">
               <ImQuotesLeft />

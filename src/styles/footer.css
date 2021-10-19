@@ -15,6 +15,7 @@
   padding: 1em;
   padding-top: 2em;
   position: relative;
+  
 }
 .footer--container img {
   width: 15px;
@@ -95,9 +96,11 @@
 }
 
 .footer--copyright {
-  margin: 1em 0;
+  margin: 1rem 0;
   display: flex;
+  padding:.5rem 0;
   justify-content: space-around;
+  border-top:1px solid var(--main-dark);
 }
 
 .footer--copyright > * {

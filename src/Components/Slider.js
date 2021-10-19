@@ -50,9 +50,9 @@ function Slider() {
        <IoChevronBackOutline/>
       </button>
      
-      {data.map((val) => {
+      {data.map((val,index) => {
         return (
-          <div className={val.slide === current ? "slide active" : "slide"}>
+          <div key={index} className={val.slide === current ? "slide active" : "slide"}>
           <div className="image__tagline">
               <p>{val.tagline.p1}</p>
               <p>{val.tagline.p2}</p>

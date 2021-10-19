@@ -1,11 +1,11 @@
 import React from "react";
 
-function Description({desc}) {
+function Description({desc,title}) {
   
   return (
     <div className="services--description">
     
-      <h3>Why SEO is needed ?</h3>
+      <h3>Why {title} is needed ?</h3>
       <div className="content">
         <div className="services__description__image">
           <img src="/allImages/SEOEdited.png" alt="" />

@@ -77,10 +77,10 @@ function AllCards() {
     <div className="card--container">
     <h3>Fostering Brands with....</h3>
       <div className="all--cards">
-        {cardData.map((card) => {
+        {cardData.map((card,index) => {
           return (
            
-           <Link to={`/${card.title.toLowerCase()}`}>
+           <Link key={index} to={`/${card.title.toLowerCase()}`}>
 
 
             <Card

@@ -1,9 +1,10 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './Components/Navbar'
+import ScrollToTop from './utils/ScrollToTop';
 function App() {
   return (
     <Router>
-
+    <ScrollToTop />
     <div>
     <Navbar />
     

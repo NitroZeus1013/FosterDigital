@@ -35,9 +35,10 @@ function WhyChooseUs() {
   return (
     <div className="feature--main-container">
         <img src="allImages/why.jpg" alt="background-image" />
-      {featureData.map((feature) => {
+      {featureData.map((feature,index) => {
         return (
           <Feature
+            key = {index}
             title={feature.title}
             logo={feature.logo}
             content={feature.content}
