@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/fosterdigital/static/css/main.845d89f4.chunk.css",
+    "main.js": "/fosterdigital/static/js/main.6a14251c.chunk.js",
+    "main.js.map": "/fosterdigital/static/js/main.6a14251c.chunk.js.map",
+    "runtime-main.js": "/fosterdigital/static/js/runtime-main.08bc6aa1.js",
+    "runtime-main.js.map": "/fosterdigital/static/js/runtime-main.08bc6aa1.js.map",
+    "static/js/2.e951270b.chunk.js": "/fosterdigital/static/js/2.e951270b.chunk.js",
+    "static/js/2.e951270b.chunk.js.map": "/fosterdigital/static/js/2.e951270b.chunk.js.map",
+    "index.html": "/fosterdigital/index.html",
+    "static/css/main.845d89f4.chunk.css.map": "/fosterdigital/static/css/main.845d89f4.chunk.css.map",
+    "static/js/2.e951270b.chunk.js.LICENSE.txt": "/fosterdigital/static/js/2.e951270b.chunk.js.LICENSE.txt",
+    "static/media/navbar.module.css": "/fosterdigital/static/media/FDS-circle.b68fc4d6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.08bc6aa1.js",
+    "static/js/2.e951270b.chunk.js",
+    "static/css/main.845d89f4.chunk.css",
+    "static/js/main.6a14251c.chunk.js"
+  ]
+}
