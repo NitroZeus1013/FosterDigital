@@ -4,7 +4,7 @@ function KeyPoints({keyp ,title}) {
   return <div className="services--key-points">
       <div className="man__image">
         <h3>5 Reasons to invest in {title}</h3>
-          <img src="allImages/manEdited.png" alt="" />
+          <img src="./allImages/manEdited.png" alt="" />
       </div>
       <div className="keypoints">
       {
