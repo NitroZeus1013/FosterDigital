@@ -5,19 +5,19 @@ import {IoChevronBackOutline , IoChevronForwardOutline} from 'react-icons/io5'
 
 const data = [
   {
-    image: "/./allImages/Image1.jpg",
+    image: "/allImages/Image1.jpg",
     tagline:{p1:"Foster your Business",p2:"with our Digital Services"},
     btnTitle:"Get a proposal",
     slide: 0,
   },
   {
-    image: "/./allImages/Image2.jpg",
+    image: "/allImages/Image2.jpg",
     tagline:{p1:"If FDS is here,",p2: "then why fear?"},
     btnTitle:"Limited time offer",
     slide: 1,
   },
   {
-    image: "/./allImages/Image3.jpg",
+    image: "/allImages/Image3.jpg",
     tagline:{p1:"Once Driven," ,p2:"Forever Digital"},
     btnTitle:"Get a consultation now",
     slide: 2,
