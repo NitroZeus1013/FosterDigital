@@ -14,14 +14,14 @@ function Footer() {
       <div className="footer--links">
         <div className="footer--logo">
           <div className="footer--home">
-            <img src="allImages/FDS-white.png" alt="" />
+            <img src="./allImages/FDS-white.png" alt="" />
           </div>
           <div className="social--links">
-            <img src="allImages/instagram.png" alt="" />
-            <img src="allImages/facebook.png" alt="" />
-            <img src="allImages/linkedin.png" alt="" />
-            <img src="allImages/twitter.png" alt="" />
-            <img src="allImages/pinterest.png" alt="" />
+            <img src="./allImages/instagram.png" alt="" />
+            <img src="./allImages/facebook.png" alt="" />
+            <img src="./allImages/linkedin.png" alt="" />
+            <img src="./allImages/twitter.png" alt="" />
+            <img src="./allImages/pinterest.png" alt="" />
           </div>
         </div>
         <div className="footer--quick-links">
@@ -37,11 +37,11 @@ function Footer() {
         
         <div className="footer--contact-details">
           <div>
-            <img src="allImages/whatsapp.png" alt="" />
+            <img src="./allImages/whatsapp.png" alt="" />
             <p>+91 9011059109</p>
           </div>
           <div>
-            <img src="allImages/email.png" alt="" />
+            <img src="./allImages/email.png" alt="" />
             <p>official@fosterdigitalservices.com</p>
           </div>
         </div>

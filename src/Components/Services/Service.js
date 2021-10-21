@@ -12,7 +12,7 @@ function Service({data}) {
         
             
             <div className="service--hero-image">
-                <img src={data.heroImage?data.heroImage:"allImages/seo_main.jpg"} alt=""  />
+                <img src={data.heroImage?data.heroImage:"./allImages/seo_main.jpg"} alt=""  />
             </div>
 
            
