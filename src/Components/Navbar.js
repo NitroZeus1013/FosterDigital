@@ -88,7 +88,7 @@ function Navbar() {
         <Route  path="/smm" > 
         <Services/>
         </Route>
-        <Route  path="/Graphic Designing" > 
+        <Route  path="/graphic designing" > 
         <Services/>
         </Route>
         <Route  path="/web development" > 

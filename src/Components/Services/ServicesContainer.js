@@ -110,7 +110,7 @@ const servicesData = {
       },
     ],
   },
-  "Graphic Designing": {
+  "graphic designing": {
     title: "Graphic Designing",
     path: "/graphic designing",
     heroImage: "",
@@ -169,7 +169,7 @@ const servicesData = {
       },
     ],
   },
-  "Web Development": {
+  "web development": {
     title: "Website Development",
     path: "/website development",
     heroImage: "",
@@ -227,7 +227,7 @@ const servicesData = {
       },
     ],
   },
-  "Web Design": {
+  "website design": {
     title: "Web Design",
     path: "/Web Design",
     heroImage: "",
@@ -273,7 +273,7 @@ const servicesData = {
     ],
     faqs: [{}],
   },
-  "App Development": {
+  "app development": {
     title: "App Development",
     path: "/App Development",
     heroImage: "",
@@ -323,7 +323,7 @@ const servicesData = {
       },
     ],
   },
-  "Content Writing": {
+  "content writing": {
     title: "Content Writing",
     path: "/Content Writing",
     heroImage: "",
@@ -367,7 +367,7 @@ const servicesData = {
       },
     ],
   },
-  Advertising: {
+  advertising: {
     title: "Advertising",
     path: "/Advertising",
     heroImage: "",
