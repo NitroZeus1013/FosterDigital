@@ -3,8 +3,9 @@ import React from "react";
 function KeyPoints({keyp ,title}) {
   return <div className="services--key-points">
       <div className="man__image">
-        <h3>5 Reasons to invest in {title}</h3>
-          <img src="./allImages/manEdited.png" alt="" />
+        <p>5 Reasons to</p> 
+        <p>invest in {title}</p>
+        <img src="./allImages/manEdited.png" alt="" />
       </div>
       <div className="keypoints">
       {
@@ -14,7 +15,7 @@ function KeyPoints({keyp ,title}) {
           className="point">
             <div className="number">{index+1}</div>
             <h3>{pt.heading}</h3>
-            <p>{pt.content}</p>
+            <p className="keypoint__content">{pt.content}</p>
           </div>)
         })
       }

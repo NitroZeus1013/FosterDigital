@@ -169,7 +169,7 @@ const servicesData = {
       },
     ],
   },
-  "web developement": {
+  "web development": {
     title: "Website Development",
     path: "/website development",
     heroImage: "./allImages/Services/Web-dev.jpg",
