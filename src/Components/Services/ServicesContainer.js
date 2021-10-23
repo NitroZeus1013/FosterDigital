@@ -5,6 +5,7 @@ import Service from "./Service";
 const servicesData = {
   seo: {
     title: "SEO",
+    quote:{quo:'"Google only loves you when everyone else loves you first.”',auth: "–Wendy Piersall"},
     path: "/seo",
     heroImage: "",
     image: "",
@@ -64,6 +65,7 @@ const servicesData = {
   },
   smm: {
     title: "SMM",
+    quote:{quo:'“There’s a problem with the word ‘social’. Social is not just Twitter, FB, etc. Social is a language.”' ,auth:"– Andrew Grill"},
     path: "/smm",
     heroImage: "./allImages/Services/SMMM.jpg",
     image: "./allImages/Services/smm2.png",
@@ -112,6 +114,7 @@ const servicesData = {
   },
   "graphic designing": {
     title: "Graphic Designing",
+    quote:{quo:'“Digital design is like painting, except the paint never dries.”',auth:"–Neville Brody Th"},
     path: "/graphic designing",
     heroImage: "./allImages/Services/GD.jpg",
     image: "./allImages/Services/Graphic.png",
@@ -171,6 +174,7 @@ const servicesData = {
   },
   "web development": {
     title: "Website Development",
+    quote:{quo:'“It’s hard to find things that won’t sell online.”',auth: "–Jeff Bezos"},
     path: "/website development",
     heroImage: "./allImages/Services/Web-dev.jpg",
     image: "./allImages/Services/Web.png",
@@ -229,6 +233,7 @@ const servicesData = {
   },
   "website design": {
     title: "Web Design",
+    quote:{quo:'“Information is only useful when it can be understood.”',auth: "–Muriel Cooper"},
     path: "/Web Design",
     heroImage: "./allImages/Services/web-design.jpg",
     image: "./allImages/Services/Web.png",
@@ -275,6 +280,7 @@ const servicesData = {
   },
   "app development": {
     title: "App Development",
+    quote:{quo:`"The Trend was: App development is winning. Now, it's won` ,auth:"-Unknown "},
     path: "/App Development",
     heroImage: "./allImages/Services/App-dev.jpg",
     image: "./allImages/Services/app-dev.png",
@@ -325,6 +331,7 @@ const servicesData = {
   },
   "content writing": {
     title: "Content Writing",
+    quote:{quo:'"Marketing is no longer about the stuff that you make, but about the stories you tell.” ',auth:"–Seth Godin"},
     path: "/Content Writing",
     heroImage: "./allImages/Services/contentt.jpg",
     image: "./allImages/Services/content.png",
@@ -369,6 +376,7 @@ const servicesData = {
   },
   advertising: {
     title: "Advertising",
+    quote:{quo:'“There’s never been a better time to be in advertising, and there’s never been a worse time.”' ,auth:"– Aaron Reitkopf"},
     path: "/Advertising",
     heroImage: "./allImages/Services/Ads.jpg",
     image: "./allImages/Services/ad.png",

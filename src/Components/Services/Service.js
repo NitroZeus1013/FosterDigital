@@ -12,6 +12,10 @@ function Service({data}) {
         
             
             <div className="service--hero-image">
+                <div className="quote">
+                <i><p>{data.quote.quo}</p></i>
+                <i className="author__name">{data.quote.auth}</i>
+                </div>
                 <img src={data.heroImage?data.heroImage:"./allImages/seo_main.jpg"} alt=""  />
             </div>
 

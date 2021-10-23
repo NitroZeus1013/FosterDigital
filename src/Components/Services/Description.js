@@ -5,7 +5,8 @@ function Description({desc,title,image}) {
   return (
     <div className="services--description">
     
-      <h3>Why {title} is needed ?</h3>
+      <p>Why {title} is needed ?</p>
+      <hr />
       <div className="content">
         <div className="services__description__image">
           <img src={image?image:"./allImages/SEOEdited.png"} alt="" />
