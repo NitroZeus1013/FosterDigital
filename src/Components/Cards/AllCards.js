@@ -48,7 +48,7 @@ const cardData = [
   {
     image: "./allImages/app.jpeg",
     logo: "./allImages/icons/app-dev.png",
-    title: "App Developement",
+    title: "App Development",
     description: "Every app is a new opportunity to make a difference",
     action: "",
   },

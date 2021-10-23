@@ -17,7 +17,7 @@
   /* border: 1px solid; */
   position: absolute;
   top: -12px;
-  right: -65%;
+  right: -50%;
   cursor: pointer;
   border: 5px solid white;
   background: url("../images/FDS-circle.png");
@@ -90,8 +90,22 @@
 
 }
 
+.request__quote__btn{
+  padding: 1rem 1rem;
+  margin: 0.4rem;
+  border-radius: 25px;
+  color: white;
+  background-image: linear-gradient(
+    180deg,
+    var(--main-light),
+    var(--main-dark)
+  );
+  border: none;
+  min-width: 24px;
+}
 
-@media screen and (min-width:680px) {
+
+@media screen and (min-width:750px) {
   .nav-bar {
     background-color: white;
     font-size: 16px;
@@ -109,6 +123,10 @@
     flex-wrap: wrap;
     height: auto;
     width: auto;
+  }
+  .nav-bar .request__quote__btn{
+    padding: .2rem 1rem;
+    color:white
   }
   .nav-bar a{
     text-decoration: none;
@@ -151,4 +169,5 @@
     
     transition: all 250ms ease-out;
   }
+  
 }

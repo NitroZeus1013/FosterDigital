@@ -42,7 +42,7 @@ function Navbar() {
 
         <Link to="/blogs">Blogs</Link>
         <Link to="/contact-us">Contact Us</Link>
-        <Link to="/products">Products</Link>
+        <Link to="/products" className={styles.request__quote__btn}>Request Quote</Link>
 
       </nav>
 
@@ -71,7 +71,7 @@ function Navbar() {
 
           <Link to="/blogs">Blogs</Link>
           <Link to="/contact-us">Contact Us</Link>
-          <Link to="/products">Products</Link>
+          <Link to="/products" className={styles.request__quote__btn}>Request Quote</Link>
         </div>
       </nav>
 
@@ -97,7 +97,7 @@ function Navbar() {
         <Route  path="/website design" > 
         <Services/>
         </Route>
-        <Route  path="/app developement" > 
+        <Route  path="/app development" > 
         <Services/>
         </Route>
         <Route  path="/content writing" > 

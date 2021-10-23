@@ -16,7 +16,7 @@ function Service({data}) {
             </div>
 
            
-          <Description desc={data.description} title={data.title}/>
+          <Description desc={data.description} title={data.title} image={data.image}/>
           <KeyPoints keyp={data.keypoints} title={data.title}/>
           <FAQs faqs={data.faqs}/>
 

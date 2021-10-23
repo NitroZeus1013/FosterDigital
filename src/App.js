@@ -3,13 +3,13 @@ import Navbar from './Components/Navbar'
 import ScrollToTop from './utils/ScrollToTop';
 function App() {
   return (
-    <Router>
+    <HashRouter>
     <ScrollToTop />
     <div>
     <Navbar />
     
     </div>
-    </Router>
+    </HashRouter>
   );
 }
 

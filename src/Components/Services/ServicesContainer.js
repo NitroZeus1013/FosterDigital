@@ -65,8 +65,8 @@ const servicesData = {
   smm: {
     title: "SMM",
     path: "/smm",
-    heroImage: "",
-    image: "",
+    heroImage: "./allImages/Services/SMMM.jpg",
+    image: "./allImages/Services/smm2.png",
     description: `That’s 490 million more social media users than at the start of 2020 and shows that social media is still growing rapidly. It’s also 53.6% of the total global population (around 7.8 billion people).
       Yep, you heard it right – more than half of all the people on earth use social media.
       And that’s even more impressive when you consider that only 4.66 billion people have access to the internet.`,
@@ -113,8 +113,8 @@ const servicesData = {
   "graphic designing": {
     title: "Graphic Designing",
     path: "/graphic designing",
-    heroImage: "",
-    image: "",
+    heroImage: "./allImages/Services/GD.jpg",
+    image: "./allImages/Services/Graphic.png",
     description: `Ninety percent of the information transmitted in the human brain is visual so your business needs strong design in order to communicate its purpose.1 With 65% of the population categorized as ‘visual learners’, your money is well spent on formulating a visual approach to create a persona for your business.
     The main reason people prefer graphics and imagery to overwritten text is primarily due to its speed of absorption. This is an extremely important component of consideration and also a major drawback concerning a long body of text.`,
 
@@ -169,11 +169,11 @@ const servicesData = {
       },
     ],
   },
-  "web development": {
+  "web developement": {
     title: "Website Development",
     path: "/website development",
-    heroImage: "",
-    image: "",
+    heroImage: "./allImages/Services/Web-dev.jpg",
+    image: "./allImages/Services/Web.png",
     description: `Most consumers are looking online for information that will help them make smarter purchasing decisions.
     In fact, according to the eCommerce Foundation, 88% of consumers will research product information before they make a purchase online or in the store.
     This buying behavior trend emphasizes the importance of a website for today’s businesses.
@@ -230,8 +230,8 @@ const servicesData = {
   "website design": {
     title: "Web Design",
     path: "/Web Design",
-    heroImage: "",
-    image: "",
+    heroImage: "./allImages/Services/web-design.jpg",
+    image: "./allImages/Services/Web.png",
     description: `Web design is important because you make on them can either get them to remain on your page and learn about your business or leave your page and turn to a competitor. A good web design helps you keep your leads on your page`,
 
     keypoints: [
@@ -276,8 +276,8 @@ const servicesData = {
   "app development": {
     title: "App Development",
     path: "/App Development",
-    heroImage: "",
-    image: "",
+    heroImage: "./allImages/Services/App-dev.jpg",
+    image: "./allImages/Services/app-dev.png",
     description: `With the growing number of people accessing the Internet via smartphones and tablets, mobile app development has the unique ability to access a large number of potential consumers.`,
 
     keypoints: [
@@ -326,8 +326,8 @@ const servicesData = {
   "content writing": {
     title: "Content Writing",
     path: "/Content Writing",
-    heroImage: "",
-    image: "",
+    heroImage: "./allImages/Services/contentt.jpg",
+    image: "./allImages/Services/content.png",
     description: `Content has come a long way from the days of print advertising. With the introduction of SEO and digital marketing, content has become the most effective way to get your brand into the digital sphere. Consistent, high-quality content writing is an invaluable way to connect brands with their consumers.
     Content also improves audience engagement and retention. Encouraging your audience to participate in your brand and delivering useful information will ensure your customers keep coming back for more`,
 
@@ -370,8 +370,8 @@ const servicesData = {
   advertising: {
     title: "Advertising",
     path: "/Advertising",
-    heroImage: "",
-    image: "",
+    heroImage: "./allImages/Services/Ads.jpg",
+    image: "./allImages/Services/ad.png",
     description: `Advertisements play a major role in every business, especially for new businesses. The business world is competitive, and advertising is used to raise awareness about a business or product, build a rapport, a brand, and position a company, product, or service against the competition for them to have an advantage. Advertising promotes strategic messaging or information and increases awareness within the target market. Several advertising media are used to deliver the advertisement to the market. Hence it is important to determine which media outlet is best for your business. In this case, media buyers usually take the role or they enroll in adtrics academy review`,
 
     keypoints: [

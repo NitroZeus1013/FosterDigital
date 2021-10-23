@@ -1,6 +1,6 @@
 import React from "react";
 
-function Description({desc,title}) {
+function Description({desc,title,image}) {
   
   return (
     <div className="services--description">
@@ -8,7 +8,7 @@ function Description({desc,title}) {
       <h3>Why {title} is needed ?</h3>
       <div className="content">
         <div className="services__description__image">
-          <img src="./allImages/SEOEdited.png" alt="" />
+          <img src={image?image:"./allImages/SEOEdited.png"} alt="" />
         </div>
         <div className="description">
             <p>
