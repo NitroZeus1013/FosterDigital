@@ -6,18 +6,24 @@ import "./clientSlider.css";
 
 const clientData = [
   {
+    highlight:'Great Company to work with.',
     companyName: "Bhagwati",
+    logo:"./allImages/Testimonial/Subsocial.png",
     comment:
       "Experienced professional designing in 'logo' and official documentation by keeping the industrial standard maintained. Completely satisfied.",
   },
   {
+    highlight:'Great Company to work with.',
     companyName: "Shikshala",
+    logo:"./allImages/Testimonial/Shikshala.png",
     comment:
       "Great company to work with. They have an in-depth knowledge of the workings of, Graphics designing, web development, and Google and over time have helped our company to identify the best locations and demographics to place our ads with outstanding graphics. I would highly recommend foster Digital Services for any company that is serious about their graphics and advertising with google",
   },
 
   {
+    highlight:'Great Company to work with.',
     companyName: "Magarun",
+    logo:"./allImages/Testimonial/Magarun.png",
     comment:
       "I reached out to FDS for design help on a logo and from the start, they were so responsive and timely on their follow-up. They made the whole process very easy and fun! Their turnaround time was impressive and their advice was spot on. I would recommend them to anyone looking for design help! They won’t steer you wrong, their prices are extremely affordable, and you’ll have what you need in no time.",
   },
@@ -45,7 +51,7 @@ function ClientSlider() {
   useEffect(() => {
     let timer = setTimeout(() => {
       next();
-    }, 5000);
+    }, 10000);
 
     return () => {
       clearTimeout(timer);
@@ -61,9 +67,12 @@ function ClientSlider() {
         <div key={index} className={current===index?"client__slide active":"client__slide"}>
             {current===index&&(
               <div className="clientSlider__content">
-              <ImQuotesLeft />
-                <h3>{val.comment}</h3>
-                <img src="" alt="company logo" />
+                <div className = "client__highlight"> 
+                <img src="./allImages/Testimonial/Inverted-comma.png" className="inverted--comma" />
+                <span><i>"{val.highlight}"</i></span>
+                </div>
+                <p>{val.comment}</p>
+                <img src={val.logo} alt="company logo" className="company--logo"/>
               </div>
               )}
         </div>
@@ -78,6 +87,7 @@ function ClientSlider() {
         <div className="dot"></div>
         <div className="dot"></div>
       </div>
+      
     </div>
   );
 }

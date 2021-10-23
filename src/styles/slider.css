@@ -1,89 +1,97 @@
-
-.slider{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* width: 100%; */
-    position: relative;
-    overflow: hidden;
-    left: 0;
-    
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  left: 0;
 }
 
-.slider__btn{
-    
-    padding:.4em .8em;
-    margin:.4em;
-    border-radius:25px;
-    color:white;
-    background-image:linear-gradient(180deg,var(--main-light) ,var(--main-dark));
-    border: none;
-    min-width:24px;
+.slider__btn {
+  padding: 0.4em 0.8em;
+  margin: 0.4em;
+  border-radius: 25px;
+  color: white;
+  background-image: linear-gradient(
+    180deg,
+    var(--main-light),
+    var(--main-dark)
+  );
+  border: none;
+  min-width: 24px;
 }
-.image{
-   object-fit: cover;
-    display: block;
-    width: 100vw;
-    height:400px;
-}
-
-.slide{
-    pointer-events: none;
-    opacity: 0;
-    transform:translateX(-100%);
-   
-}
-.slide.active{
-  
-    opacity: 1;
-    transform: translateX(0);
-    transition: all 1s ease-in;
-    max-height: 100%;
+.image {
+  object-fit: cover;
+  display: block;
+  width: 100vw;
+  height: 500px;
 }
 
-.controls{
-   
-    position: absolute;
-    display: block;
-    width: 40px;
-    background-color: transparent;
-    border: none;
-    padding:0 .8em;
-    bottom: 0;
-   
+.slide {
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(-100%);
 }
-.controls svg{
-    
-    width: 24px;
-    height: 24px;
-}
-.left-control{
-    top:0;
-    left: 0;
-}
-.right-control{
-    right: 0;
-    top:0;
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1s ease-in;
+  max-height: 100%;
 }
 
-
-
-.image__tagline{
-    position: absolute;
-    top:40%;
-    left:20%
+.controls {
+  position: absolute;
+  display: block;
+  width: 40px;
+  background-color: transparent;
+  border: none;
+  padding: 0 0.8em;
+  bottom: 0;
+}
+.controls svg {
+  width: 24px;
+  height: 24px;
+}
+.left-control {
+  top: 0;
+  left: 0;
+}
+.right-control {
+  right: 0;
+  top: 0;
 }
 
-.image__tagline > p{
-    font-size: 1rem;
+.image__tagline {
+  position: absolute;
+  top: 40%;
+  left: 18%;
+}
+
+.image__tagline > p {
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.slider .control--dots {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 10px;
+}
+.dot {
+  width: 7px;
+  height: 7px;
+  background-color: rgb(104, 101, 101);
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 750px) {
+  .image__tagline > p {
+    font-size: 3rem;
     font-weight: bolder;
-
-}
-
-@media screen and (min-width:750px) {
-    .image__tagline > p{
-        font-size: 3rem;
-        font-weight: bolder;
-    
-    }
+  }
 }

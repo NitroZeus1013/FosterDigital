@@ -113,28 +113,70 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-weight: normal;
+    margin-bottom: 4rem;
 }
 .slider--container >h3{
     text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.clientSlider__content p{
+    margin: 1rem 0;
+}
+.clientSlider__content span{
+    display: inline;
+    width: 100%;
+    text-align: center;
 }
 
+.client__highlight{
+    display: flex;
+}
 
+.inverted--comma{
+    width: 50px;
+    height: 40px;
+    display: inline-block;
+
+}
+.company--logo{
+    height: 50px;
+    object-fit: cover;
+    display: inline-block;
+}
 
 .client__slide{
     pointer-events: none;
     opacity: 0;
-    transform:translateX(-100%);
+    /* transform:translateX(100%); */
     background-color: white;
-   
-   
+    
+}
+
+@keyframes slider {
+    0% {
+    transform:translateX(-200%);
+
+    }
+    33% {
+    transform:translateX(0);
+
+    }
+    100% {
+    transform:translateX(500%);
+
+    }
 }
 .client__slide.active{
+    animation: slider 20s infinite;
   
     opacity: 1;
-    transform: translateX(0);
-    max-height: 100%;
-    padding: 1.5rem;
+    /* transform: translateX(0); */
     
+    padding: 1.5rem;
+    width: 100%;
     margin: 1rem;
     margin-top: 2rem;
     box-shadow:0 0 .5rem .2rem grey;
@@ -142,7 +184,7 @@
     border-radius: 25px;
     display: block;
     left:0;
-    transition: transform  500ms ease-out;
+    /* transition: transform  500ms ease-out; */
 }
 
 .client__slide::before{
@@ -151,14 +193,14 @@
     width: 50px;
     height: 50px;
     background-color: white;
-    box-shadow:-6px -6px 6px -5px grey;
+    box-shadow:-6px -6px 6px -5px rgba(171,169,169,0.67);
    
     top: -20px;;
     border-radius: 10px;
 }
 
 .client__slide::before {
-    left: 45%;
+    left: 47%;
     transform: rotate(45deg);
     z-index: -1;
 }
@@ -170,8 +212,8 @@
     justify-content: center;
 }
 .dot{
- width: 5px;
- height: 5px;
+ width: 7px;
+ height: 7px;
  background-color: grey;
  border-radius: 50%;
  margin: 5px;
@@ -184,6 +226,10 @@
 }
 
 @media screen and (min-width:750px) {
+    .slider--container{
+        padding:1rem 14rem;
+    }
+    
     .client__slide{
         pointer-events: none;
         opacity: 0;
@@ -199,11 +245,12 @@
         
         margin: 1rem;
         margin-top: 2rem;
-        height: 200px;
+        height: 250px;
        
-        box-shadow:0 0 .5rem .2rem grey;
+        /* box-shadow:0 0 .5rem .2rem grey; */
+        box-shadow: 0px 0px 20px 2px rgba(171,169,169,0.67);
         
-        border-radius: 25px;
+        border-radius: 50px;
         display: block;
         left:0;
         transition: transform  500ms ease-out;

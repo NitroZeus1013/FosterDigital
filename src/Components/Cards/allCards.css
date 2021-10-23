@@ -17,19 +17,19 @@
     text-align: center;
     
 }
-.card--container h3{
-    font-size: 28px;
+.card--container > h3{
+    font-size: 32px;
     font-weight: bold;
-    margin-bottom: .5em;
+    margin-bottom: .5rem;
 }
 
 @media screen and (min-width:750px) {
     .all--cards{
-        margin:2.5em 5em;
-        padding: 1.5em;
+        margin:2.5rem 12rem;
         display: grid;
-        place-items: center;
         grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
+        align-items: center;
 
     }
     

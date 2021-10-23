@@ -70,6 +70,12 @@ function Slider() {
         <IoChevronForwardOutline />
       </button>
 
+      <div className="control--dots">
+        <div className="dot" onClick={()=>{setCurrent(0)}}></div>
+        <div className="dot" onClick={()=>{setCurrent(1)}}></div>
+        <div className="dot" onClick={()=>{setCurrent(2)}}></div>
+      </div>
+
     </div>
   );
 }
