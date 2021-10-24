@@ -1,14 +1,15 @@
 import React from "react";
 import styles from "../styles/homeAbout.module.css";
-
+import HR from './utils/HR';
 function HomeAbout() {
   return (
     <div className={styles["home--about--container"]}>
      
 
 
-      <h3>About Us</h3>
-     
+      <h3>About Us
+      <HR width={90}/></h3>
+    
 
       <div className={styles["home--about"]}>
       <div className={styles["home-about-image"]}>

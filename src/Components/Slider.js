@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import "../styles/slider.css";
 import {IoChevronBackOutline , IoChevronForwardOutline} from 'react-icons/io5'
 
@@ -26,6 +26,8 @@ const data = [
 
 function Slider() {
   const [current, setCurrent] = useState(0);
+
+
 
   const prev = () => {
     console.log("clicked");

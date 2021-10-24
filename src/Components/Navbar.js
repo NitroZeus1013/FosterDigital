@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import About from "../views/About";
+import About from "./About";
 import Home from "../views/Home";
 
 import Services from '../Components/Services/ServicesContainer'
@@ -8,6 +8,8 @@ import Services from '../Components/Services/ServicesContainer'
 import styles from "../styles/navbar.module.css";
 import {GiHamburgerMenu} from 'react-icons/gi'
 import {CgClose} from 'react-icons/cg'
+import NotFound from './NotFound/NotFound';
+import ComingSoon from "./ComingSoon/ComingSoon";
 
 function Navbar() {
   const [hamb, setHamb] = useState(false);
@@ -25,7 +27,7 @@ function Navbar() {
         <Link to="/about">About Us</Link>
         <div id={styles["services"]}>
         <Link onClick={dropDrownHandler} to="#">Services</Link>
-        <ul className={showDropDrown?styles["active"]:styles["dropdown"]}>
+       {showDropDrown && <ul className={showDropDrown?styles["active"]:styles["dropdown"]}>
           <li onClick={dropDrownHandler}><Link to="/SEO"> SEO </Link> </li>
           <li onClick={dropDrownHandler}><Link to="SMM">SMM</Link></li>
           <li onClick={dropDrownHandler}><Link to="Graphic Designing">Graphic Designing</Link></li>
@@ -34,7 +36,7 @@ function Navbar() {
           <li onClick={dropDrownHandler}><Link to="App Developement">App Developement</Link></li>
           <li onClick={dropDrownHandler}><Link to="Content writing">Content Writing</Link></li>
           <li onClick={dropDrownHandler}><Link to="Advertising">Advertising</Link></li>
-        </ul>
+        </ul>}
         </div>
         <Link to="/portfolio">Portfolio</Link>
 
@@ -42,7 +44,7 @@ function Navbar() {
 
         <Link to="/blogs">Blogs</Link>
         <Link to="/contact-us">Contact Us</Link>
-        <Link to="/products" className={styles.request__quote__btn}>Request Quote</Link>
+        <a href="https://calendly.com/foster-digital-services/15-minute-free-consultation-call?month=2021-10" className={styles.request__quote__btn}>Request Quote</a>
 
       </nav>
 
@@ -71,7 +73,8 @@ function Navbar() {
 
           <Link to="/blogs">Blogs</Link>
           <Link to="/contact-us">Contact Us</Link>
-          <Link to="/products" className={styles.request__quote__btn}>Request Quote</Link>
+        <a href="https://calendly.com/foster-digital-services/15-minute-free-consultation-call?month=2021-10" className={styles.request__quote__btn}>Request Quote</a>
+          
         </div>
       </nav>
 
@@ -81,6 +84,12 @@ function Navbar() {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/portfolio">
+          <ComingSoon />
+        </Route>
+        <Route path="/blogs">
+          <ComingSoon />
         </Route>
         <Route  path="/seo" > 
         <Services/>
@@ -105,6 +114,9 @@ function Navbar() {
         </Route>
         <Route  path="/advertising" > 
         <Services/>
+        </Route>
+        <Route path ="*">
+          <NotFound />
         </Route>
       </Switch>
     </>

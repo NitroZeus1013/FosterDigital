@@ -1,5 +1,6 @@
 import React from "react";
 import Feature from "./Feature";
+import HR from '../utils/HR';
 
 import "./whyChooseUs.css";
 
@@ -33,8 +34,11 @@ const featureData = [
 
 function WhyChooseUs() {
   return (
+    <div className="why--choose-us">
+    <img src="./allImages/why.jpg" alt="background-image" />
+   <h3>Why Choose Us ?<HR width={150} color={"white"}/></h3>
     <div className="feature--main-container">
-        <img src="./allImages/why.jpg" alt="background-image" />
+       
       {featureData.map((feature,index) => {
         return (
           <Feature
@@ -45,6 +49,7 @@ function WhyChooseUs() {
           />
         );
       })}
+    </div>
     </div>
   );
 }

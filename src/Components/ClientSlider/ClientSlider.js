@@ -1,37 +1,45 @@
-import React, { useState, useEffect ,useRef} from "react";
-import {ImQuotesLeft} from 'react-icons/im'
+import React, { useState, useEffect, useRef } from "react";
+import { ImQuotesLeft } from "react-icons/im";
+import HR from "../utils/HR";
 
 import Slide from "./Slide";
 import "./clientSlider.css";
 
 const clientData = [
   {
-    highlight:'Great Company to work with.',
-    companyName: "Bhagwati",
-    logo:"./allImages/Testimonial/Subsocial.png",
+    highlight: "Great Company to work with.",
+    companyName: "SantraGolie",
+    logo: "./allImages/Testimonial/santragolie.png",
     comment:
-      "Experienced professional designing in 'logo' and official documentation by keeping the industrial standard maintained. Completely satisfied.",
+      "Great marketing agency to work with. Their SEO and Designing team is perfect. You're guaranteed to achieve great results if Foster Digital Services is working for you.",
   },
   {
-    highlight:'Great Company to work with.',
+    highlight: "Great Company to work with.",
     companyName: "Shikshala",
-    logo:"./allImages/Testimonial/Shikshala.png",
+    logo: "./allImages/Testimonial/Shikshala.png",
     comment:
       "Great company to work with. They have an in-depth knowledge of the workings of, Graphics designing, web development, and Google and over time have helped our company to identify the best locations and demographics to place our ads with outstanding graphics. I would highly recommend foster Digital Services for any company that is serious about their graphics and advertising with google",
   },
 
   {
-    highlight:'Great Company to work with.',
+    highlight: "Great Company to work with.",
     companyName: "Magarun",
-    logo:"./allImages/Testimonial/Magarun.png",
+    logo: "./allImages/Testimonial/Magarun.png",
     comment:
       "I reached out to FDS for design help on a logo and from the start, they were so responsive and timely on their follow-up. They made the whole process very easy and fun! Their turnaround time was impressive and their advice was spot on. I would recommend them to anyone looking for design help! They won’t steer you wrong, their prices are extremely affordable, and you’ll have what you need in no time.",
   },
+  {
+    highlight: "Great Company to work with.",
+    companyName: "SubSocial",
+    logo: "./allImages/Testimonial/Subsocial.png",
+    comment:
+      "Working with FDS to build our social media presence has been really straightforward and hassle-free. We’ve developed our social media strategy together, drawing on their expertise and incorporating our ideas so that the end results are really awesome.",
+  }
 ];
 
 function ClientSlider() {
   const [current, setCurrent] = useState(0);
-  
+
   const prev = () => {
     console.log("clicked");
     if (current === 0) {
@@ -41,7 +49,6 @@ function ClientSlider() {
     }
   };
   const next = () => {
-    
     // console.log(current) some how recieving 0 here as state.
     if (current === clientData.length - 1) setCurrent(0);
     else setCurrent(current + 1);
@@ -60,34 +67,71 @@ function ClientSlider() {
 
   return (
     <div className="slider--container">
-      <h3>Listen from our clients...</h3>
+      <h3>
+        Listen from our clients... <HR width={150} />
+      </h3>
 
-      {clientData.map((val,index)=>{
+      {clientData.map((val, index) => {
         return (
-        <div key={index} className={current===index?"client__slide active":"client__slide"}>
-            {current===index&&(
+          <div
+            key={`slide${index}`}
+            className={
+              current === index ? "client__slide active" : "client__slide"
+            }
+          >
+            {current === index && (
               <div className="clientSlider__content">
-                <div className = "client__highlight"> 
-                <img src="./allImages/Testimonial/Inverted-comma.png" className="inverted--comma" />
-                <span><i>"{val.highlight}"</i></span>
+                <div className="client__highlight">
+                  <img
+                    src="./allImages/Testimonial/Inverted-comma.png"
+                    className="inverted--comma"
+                  />
+                  <span>
+                    <i>"{val.highlight}"</i>
+                  </span>
                 </div>
                 <p>{val.comment}</p>
-                <img src={val.logo} alt="company logo" className="company--logo"/>
+                <img
+                  src={val.logo}
+                  alt="company logo"
+                  className="company--logo"
+                />
               </div>
-              )}
-        </div>
-        )
-          
+            )}
+          </div>
+        );
       })}
-    
 
       <div className="control--dots">
-        <div className="dot"></div>
-        <div className="dot"></div>
-        <div className="dot"></div>
-        <div className="dot"></div>
+        <div
+          
+          onClick={() => {
+            setCurrent(0);
+          }}
+          className="dot"
+        ></div>
+        <div
+          
+          onClick={() => {
+            setCurrent(1);
+          }}
+          className="dot"
+        ></div>
+        <div
+          
+          onClick={() => {
+            setCurrent(2);
+          }}
+          className="dot"
+        ></div>
+        <div
+          
+          onClick={() => {
+            setCurrent(3);
+          }}
+          className="dot"
+        ></div>
       </div>
-      
     </div>
   );
 }

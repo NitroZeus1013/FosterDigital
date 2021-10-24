@@ -6,6 +6,9 @@ function FAQs({faqs}) {
     return (
         
         <div className="services--faqs">
+        <p>FAQs</p>
+        <hr />
+        
         {
             faqs.map((fq,index)=>{
             return <FAq

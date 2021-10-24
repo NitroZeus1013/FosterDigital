@@ -64,6 +64,7 @@
 }
 .description p {
   font-size: 20px;
+  margin-left: 1rem;
 }
 .services__description__image img {
   width: 100%;
@@ -93,6 +94,8 @@
   );
   border: none;
   min-width: 24px;
+ 
+
 }
 
 /* keypoints styles */
@@ -149,12 +152,14 @@
 }
 
 .number {
+font-size: 18px;
+font-weight: bolder;
   width: 30px;
   height: 30px;
   background-color: var(--main-dark);
   border-radius: 50%;
   position: absolute;
-  top: -10px;
+  top: -15px;
   left: 10px;
   text-align: center;
   color: white;
@@ -176,7 +181,17 @@
   padding: 1rem;
   margin: 3rem 1rem;
 }
-
+.services--faqs > p{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+.services--faqs hr {
+    width: 60px;
+    height: 3px;
+    background-color: black;
+    border:none;
+}
 .faq {
   width: 300px;
   padding: 0.5rem;

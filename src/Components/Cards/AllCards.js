@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "./Card";
 import Service from "../Services/Service";
+import HR from '../utils/HR';
 
 import { Link,Route,Switch } from "react-router-dom";
 
@@ -75,7 +76,7 @@ function AllCards() {
   }
   return (
     <div className="card--container">
-    <h3>Fostering Brands with....</h3>
+    <h3>Fostering Brands With....<HR width={170}/></h3>
       <div className="all--cards">
         {cardData.map((card,index) => {
           return (
