@@ -3,7 +3,7 @@
     margin: 1.5em;
     border:2px solid skyblue;
     border-radius: 8px;
-    padding:2em 
+    padding:1em 
 }
 .home--about--container > h3{
     margin-bottom: 1rem;
@@ -44,7 +44,7 @@
         margin:2rem 10rem;
         border:2px solid skyblue;
         border-radius: 8px;
-        padding:2em;
+        padding:1em;
         flex-direction: column;
         
     }

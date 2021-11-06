@@ -10,6 +10,7 @@
 }
 
 .slider__btn {
+  font-size: 18px;
   padding: 0.4em 0.8em;
   margin: 0.4em;
   border-radius: 25px;
@@ -72,8 +73,9 @@
   bottom: 0;
 }
 .controls svg {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
+  color: #adadad;
 }
 .left-control {
   top: 0;

@@ -54,7 +54,7 @@ function Navbar() {
 
       <nav className={styles["mob-nav-bar"]}>
       <div className={styles["mob-bar"]}>
-        <Link className={styles["logo"]} to="/">Home</Link>
+        <Link className={styles["mob__logo"]} to="/" onClick={()=>{setHamb(false)}}> <img src="./allImages/FDS.png"/></Link>
         {hamb ? (
           <button className= {styles["menu-button"]}  onClick={hamburgerMenuHandler}>
             <CgClose/>

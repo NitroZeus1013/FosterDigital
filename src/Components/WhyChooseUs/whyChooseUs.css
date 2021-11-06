@@ -50,6 +50,7 @@ margin: .5em;
 }
 .feature--content{
     font-size: 14px;
+    text-align: center;
 }
 
 @media screen and (min-width:750px) {

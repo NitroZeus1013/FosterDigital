@@ -83,6 +83,7 @@
   font-size: 14px;
 }
 .description__button {
+  
   padding: 0.4em 0.8em;
   margin: 0.4em;
   border-radius: 25px;
@@ -104,6 +105,7 @@
   display: flex;
 }
 .man__image {
+
   background-image: linear-gradient(
     180deg,
     var(--main-light),
@@ -112,14 +114,16 @@
   padding: 1rem;
   width: 500px;
   max-width: 500px;
+  /* overflow: hidden; */
 }
 .man__image > img {
-  object-fit: cover;
+  object-fit:cover;
   width: 100%;
+  /* height: 70%; */
 }
 .keypoints {
   margin: 1rem 0;
-  padding: 5rem;
+  padding: 1rem;
   border-bottom: 2px solid var(--main-light);
   border-top: 2px solid var(--main-light);
   width: 100%;
@@ -129,7 +133,7 @@
   border: 1px solid var(--main-light);
   padding: 1rem;
   padding-top: 1.5rem;
-  margin: 2rem;
+  margin: 1rem .5rem;
   border-radius: 5px;
 
   background-color: rgba(214, 214, 214, 0.39);
@@ -224,6 +228,21 @@ font-weight: bolder;
 }
 
 @media screen and (min-width: 750px) {
+  .point {
+    position: relative;
+    border: 1px solid var(--main-light);
+    padding: 1rem;
+    padding-top: 1.5rem;
+    margin: 2rem;
+    border-radius: 5px;
+  
+    background-color: rgba(214, 214, 214, 0.39);
+  }
+  .keypoints {
+  
+    padding: 5rem;
+   
+  }
   .services--description {
     margin: 2rem 10rem;
     border: 2px solid skyblue;
