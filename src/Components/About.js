@@ -15,6 +15,7 @@ const data = {
 };
 
 function About() {
+  
   return (
     <div>
       <div className="service--hero-image">
@@ -39,9 +40,9 @@ function About() {
           </div>
           <div className="description">
             <p>{data.desc}</p>
-            <button className="description__button">Get a Proposal</button>
           </div>
         </div>
+        <button className="description__button">Get a Proposal</button>
       </div>
 
       <div className="vision__mission">

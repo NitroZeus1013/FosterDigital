@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Link, BrowserRouter as Router, Route, Switch ,useHistory} from "react-router-dom";
 import About from "./About";
 import Home from "../views/Home";
 
@@ -14,6 +14,8 @@ import ComingSoon from "./ComingSoon/ComingSoon";
 function Navbar() {
   const [hamb, setHamb] = useState(false);
   const [showDropDrown,setShowDropDown] = useState(false);
+  const path = useHistory();
+
   const hamburgerMenuHandler = () => {
     console.log("clicked");
     setHamb(!hamb);
@@ -21,6 +23,7 @@ function Navbar() {
   const dropDrownHandler = ()=>{
       setShowDropDown(!showDropDrown);
   }
+ 
   return (
     <>
       <nav className={styles["nav-bar"]}>
@@ -30,12 +33,12 @@ function Navbar() {
        {showDropDrown && <ul className={showDropDrown?styles["active"]:styles["dropdown"]}>
           <li onClick={dropDrownHandler}><Link to="/SEO"> SEO </Link> </li>
           <li onClick={dropDrownHandler}><Link to="SMM">SMM</Link></li>
-          <li onClick={dropDrownHandler}><Link to="Graphic Designing">Graphic Designing</Link></li>
-          <li onClick={dropDrownHandler}><Link to="Web Development">Web Development</Link></li>
-          <li onClick={dropDrownHandler}><Link to="Website Design">Website Design</Link></li>
-          <li onClick={dropDrownHandler}><Link to="App Developement">App Developement</Link></li>
-          <li onClick={dropDrownHandler}><Link to="Content writing">Content Writing</Link></li>
-          <li onClick={dropDrownHandler}><Link to="Advertising">Advertising</Link></li>
+          <li onClick={dropDrownHandler}><Link to="/Graphic Designing">Graphic Designing</Link></li>
+          <li onClick={dropDrownHandler}><Link to="/Web Development">Web Development</Link></li>
+          <li onClick={dropDrownHandler}><Link to="/Website Design">Website Design</Link></li>
+          <li onClick={dropDrownHandler}><Link to="/App Development">App Developement</Link></li>
+          <li onClick={dropDrownHandler}><Link to="/Content writing">Content Writing</Link></li>
+          <li onClick={dropDrownHandler}><Link to="/Advertising">Advertising</Link></li>
         </ul>}
         </div>
         <Link to="/portfolio">Portfolio</Link>
