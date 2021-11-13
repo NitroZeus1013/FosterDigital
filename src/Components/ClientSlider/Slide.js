@@ -1,8 +1,8 @@
 import React from "react";
-function Slide({client,active}) {
+function Slide({client}) {
   return (
     <>
-      <div className="client--slide" ref= {active}>
+      <div className="client--slide">
         <h3>
         {client.comment}
         </h3>

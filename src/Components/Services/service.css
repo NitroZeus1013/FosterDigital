@@ -17,15 +17,15 @@
     background-color: rgba(0, 0, 0, 0.55);
 }
 .service--hero-image .quote{
-    display: flex;
-    flex-direction: column;
-    color: white;
-    font-weight: bolder;
-    font-size: 32px;
-    width: 40%;
-    position: absolute;
-    top: 25%;
-    left: 25%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  
+  position: absolute;
+  top: 25%;
+  padding: .5rem;
 }
 .service--hero-image .author__name{
     align-self: flex-end;
@@ -33,10 +33,15 @@
     font-size: 16px;
 }
 .services--description {
-  margin: 1.5rem 3rem;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem ;
   border: 2px solid skyblue;
   border-radius: 8px;
-  padding: 2em;
+  padding: 1em;
 }
 .services--description hr {
   text-align: center;
@@ -55,21 +60,25 @@
 }
 .content {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .services__description__image {
   flex-basis: 30%;
 }
 .description {
   flex-basis: 70%;
+  display: flex;
+  align-items: center;
 }
 .description p {
-  font-size: 20px;
-  margin-left: 1rem;
+  margin-left:1rem;
 }
 .services__description__image img {
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
+  height: 250px;
 }
 
 .home--about--content h3 {
@@ -244,10 +253,27 @@ font-weight: bolder;
    
   }
   .services--description {
+   
     margin: 2rem 10rem;
     border: 2px solid skyblue;
     border-radius: 8px;
     padding: 2em;
+  }
+
+  .service--hero-image .quote{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: bolder;
+    font-size: 32px;
+    width: 40%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+  }
+
+  .content{
+    flex-direction: row;
   }
 
   .faq {
@@ -262,6 +288,6 @@ font-weight: bolder;
     font-size: 18px;
   }
   .description {
-    font-size: 16px;
+    font-size: 20px;
   }
 }

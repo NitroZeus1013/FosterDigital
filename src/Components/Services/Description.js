@@ -15,9 +15,11 @@ function Description({desc,title,image}) {
             <p>
               {desc}
             </p>
-            <button className="description__button">Get a Proposal</button>
         </div>
+
       </div>
+      <button className="description__button">Get a Proposal</button>
+    
     </div>
   );
 }

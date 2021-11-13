@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { ImQuotesLeft } from "react-icons/im";
 import HR from "../utils/HR";
 
@@ -40,6 +40,12 @@ const clientData = [
 function ClientSlider() {
   const [current, setCurrent] = useState(0);
 
+
+
+
+  const dotsController  = (slide) =>{
+    setCurrent(slide);
+  }
   const prev = () => {
     console.log("clicked");
     if (current === 0) {
@@ -55,15 +61,16 @@ function ClientSlider() {
     // at first re-render state was changed to 1 but after that also we were recieving 0  as stated in above line . So react was not updating it 1 again because its same as previous state.
     // so we need to tell useEffect that state has changed .
   };
-  useEffect(() => {
-    let timer = setTimeout(() => {
-      next();
-    }, 10000);
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [current]);
+  // useEffect(() => {
+  //   let timer = setTimeout(() => {
+  //     next();
+  //   }, 10000);
+
+  //   return () => {
+  //     clearTimeout(timer);
+  //   };
+  // }, [current]);
 
   return (
     <div className="slider--container">
@@ -108,28 +115,28 @@ function ClientSlider() {
           onClick={() => {
             setCurrent(0);
           }}
-          className="dot"
+          className={current==0?"dot dot--active":"dot"}
         ></div>
         <div
           
           onClick={() => {
             setCurrent(1);
           }}
-          className="dot"
+          className={current==1?"dot dot--active":"dot"}
         ></div>
         <div
           
           onClick={() => {
             setCurrent(2);
           }}
-          className="dot"
+          className={current==2?"dot dot--active":"dot"}
         ></div>
         <div
           
           onClick={() => {
             setCurrent(3);
           }}
-          className="dot"
+          className={current==3?"dot dot--active":"dot"}
         ></div>
       </div>
     </div>

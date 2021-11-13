@@ -44,7 +44,7 @@ function Navbar() {
 
         <Link to="/blogs">Blogs</Link>
         <Link to="/contact-us">Contact Us</Link>
-        <a href="https://calendly.com/foster-digital-services/15-minute-free-consultation-call?month=2021-10" className={styles.request__quote__btn}>Request Quote</a>
+        <a className={styles.request__quote__btn} href="https://calendly.com/foster-digital-services/15-minute-free-consultation-call?month=2021-10" className={styles.request__quote__btn}>Request Quote</a>
 
       </nav>
 

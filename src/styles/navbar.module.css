@@ -100,10 +100,10 @@
 
 }
 
-.request__quote__btn{
+.nav-bar .request__quote__btn{
   padding: 1rem 1rem;
   margin: 0.4rem;
-  border-radius: 25px;
+  border-radius: 50px;
   color: white;
   background-image: linear-gradient(
     180deg,

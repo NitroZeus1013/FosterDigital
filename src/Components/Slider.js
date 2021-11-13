@@ -73,9 +73,27 @@ function Slider() {
       </button>
 
       <div className="control--dots">
-        <div className="dot" onClick={()=>{setCurrent(0)}}></div>
-        <div className="dot" onClick={()=>{setCurrent(1)}}></div>
-        <div className="dot" onClick={()=>{setCurrent(2)}}></div>
+      <div
+          
+          onClick={() => {
+            setCurrent(0);
+          }}
+          className={current==0?"dot dot--active":"dot"}
+        ></div>
+        <div
+          
+          onClick={() => {
+            setCurrent(1);
+          }}
+          className={current==1?"dot dot--active":"dot"}
+        ></div>
+        <div
+          
+          onClick={() => {
+            setCurrent(2);
+          }}
+          className={current==2?"dot dot--active":"dot"}
+        ></div>
       </div>
 
     </div>
