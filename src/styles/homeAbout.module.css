@@ -3,7 +3,11 @@
     margin: 1.5em;
     border:2px solid skyblue;
     border-radius: 8px;
-    padding:1em 
+    padding:1em ;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .home--about--container > h3{
     margin-bottom: 1rem;
@@ -17,6 +21,11 @@
  display:block;
 } 
 
+
+.home--about--content{
+    display: flex;
+    align-items: center;
+}
 .home--about--content h3{
     margin-bottom: 1.5rem;
 }
@@ -40,13 +49,13 @@
 @media screen and (min-width:750px) {
     .home--about--container{
         display: flex;
+        flex-direction: column;
         align-items: center;
       
         margin:2rem 10rem;
         border:2px solid skyblue;
         border-radius: 8px;
         padding:1em;
-        flex-direction: column;
         
     }
     .home--about{
@@ -58,8 +67,8 @@
         font-size: 18px;
     }
     .home-about-image img{
-        max-width: 300px;
-        height: 300px;
+        max-width: 250px;
+        height: 250px;
         object-fit: cover;
         display:block;
        } 

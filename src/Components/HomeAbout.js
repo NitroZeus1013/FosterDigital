@@ -28,12 +28,13 @@ function HomeAbout() {
             because, <b>if FDS is here then why fear?</b>
           </p>
           <p>What are you waiting for?</p>
-          <button className={styles["home--about--button"]}>
-            Get Proposal{" "}
-          </button>
+          
         </main>
       </div>
       </div>
+      <button className={styles["home--about--button"]}>
+            Get Proposal{" "}
+          </button>
     </div>
   );
 }

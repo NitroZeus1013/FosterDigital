@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from 'react-router-dom'
 import "../styles/footer.css";
 
 function Footer() {
@@ -24,14 +24,16 @@ function Footer() {
             <img src="./allImages/pinterest.png" alt="" />
           </div>
         </div>
+
         <div className="footer--quick-links">
           <div>
             <h4>Quick Links</h4>
-            <p>- About Us</p>
-            <p>- Portfolio</p>
-            <p>- Blogs</p>
-            <p>- Products</p>
-            <p>- Privacy Policy</p>
+            <p><Link to="/about">- About Us</Link></p>
+            <p><Link to="/portfolio">- Portfolio</Link></p>
+            <p><Link to="/services">- Services</Link></p>
+            <p><Link to="/blogs">- Blogs</Link></p>
+            <p><Link to="/products">- Products</Link></p>
+            <p><Link to="/privacy">- Privacy Policy</Link></p>
           </div>
         </div>
         
