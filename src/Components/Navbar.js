@@ -7,7 +7,20 @@ import Services from '../Components/Services/ServicesContainer'
 
 import styles from "../styles/navbar.module.css";
 import {GiHamburgerMenu} from 'react-icons/gi'
-import {CgClose} from 'react-icons/cg'
+import {CgClose} from 'react-icons/cg';
+import {Grid , AppBar} from '@mui/material';
+import Toolbar from '@mui/material/Toolbar';
+
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormGroup from '@mui/material/FormGroup';
+import MenuItem from '@mui/material/MenuItem';
+import Menu from '@mui/material/Menu';
+
+
+
 import NotFound from './NotFound/NotFound';
 import ComingSoon from "./ComingSoon/ComingSoon";
 
@@ -26,6 +39,9 @@ function Navbar() {
  
   return (
     <>
+    <Grid>
+
+    <Grid item md ={12}>
       <nav className={styles["nav-bar"]}>
         <Link to="/about">About Us</Link>
         <div id={styles["services"]}>
@@ -51,11 +67,11 @@ function Navbar() {
 
       </nav>
 
-
+      </Grid>
 
       {/* Mobile Navigation */}
 
-      <nav className={styles["mob-nav-bar"]}>
+      {/* <nav className={styles["mob-nav-bar"]}>
       <div className={styles["mob-bar"]}>
         <Link className={styles["mob__logo"]} to="/" onClick={()=>{setHamb(false)}}> <img src="./allImages/FDS.png"/></Link>
         {hamb ? (
@@ -79,7 +95,16 @@ function Navbar() {
         <a href="https://calendly.com/foster-digital-services/15-minute-free-consultation-call?month=2021-10" className={styles.request__quote__btn}>Request Quote</a>
           
         </div>
-      </nav>
+      </nav> */}
+
+      <Grid item xs={12}>
+      <AppBar>
+
+      </AppBar>
+
+      </Grid>
+    </Grid>
+
 
       <Switch>
         <Route exact path="/">
