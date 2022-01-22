@@ -144,8 +144,12 @@
   padding-top: 1.5rem;
   margin: 1rem .5rem;
   border-radius: 5px;
-
-  background-color: rgba(214, 214, 214, 0.39);
+  background-color: white;
+  box-shadow:0 10px 29px 0 rgb(68 88 144 / 10%);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.point:hover{
+  box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
 }
 .keypoint__content {
   height: 200px;
@@ -244,8 +248,9 @@ font-weight: bolder;
     padding-top: 1.5rem;
     margin: 2rem;
     border-radius: 5px;
+  box-shadow:0 10px 29px 0 rgb(68 88 144 / 10%);
+
   
-    background-color: rgba(214, 214, 214, 0.39);
   }
   .keypoints {
   
