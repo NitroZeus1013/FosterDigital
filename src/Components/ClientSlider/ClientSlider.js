@@ -1,9 +1,30 @@
 import React, { useState, useEffect } from "react";
-import { ImQuotesLeft } from "react-icons/im";
-import HR from "../utils/HR";
+import { motion ,AnimatePresence} from "framer-motion";
 
 import Slide from "./Slide";
+import HR from "../utils/HR";
 import "./clientSlider.css";
+
+
+const slideVariants={
+  visible:{
+    x:0,
+    transition:{
+      delay:0.2,
+      stiffness:120
+
+    }
+  },
+  hidden:{
+    x:'-100vw'
+  },
+  exit:{
+    x:"100vw",
+    transition:{
+      ease:'easeInOut'
+    }
+  }
+}
 
 const clientData = [
   {
@@ -34,18 +55,16 @@ const clientData = [
     logo: "./allImages/Testimonial/Subsocial.png",
     comment:
       "Working with FDS to build our social media presence has been really straightforward and hassle-free. We’ve developed our social media strategy together, drawing on their expertise and incorporating our ideas so that the end results are really awesome.",
-  }
+  },
 ];
 
 function ClientSlider() {
   const [current, setCurrent] = useState(0);
+  const [showSlide, setShowSlide] = useState(true);
 
-
-
-
-  const dotsController  = (slide) =>{
+  const dotsController = (slide) => {
     setCurrent(slide);
-  }
+  };
   const prev = () => {
     console.log("clicked");
     if (current === 0) {
@@ -63,13 +82,7 @@ function ClientSlider() {
   };
 
   // useEffect(() => {
-  //   let timer = setTimeout(() => {
-  //     next();
-  //   }, 10000);
-
-  //   return () => {
-  //     clearTimeout(timer);
-  //   };
+  //  setShowSlide(true)
   // }, [current]);
 
   return (
@@ -78,65 +91,65 @@ function ClientSlider() {
         Listen from our clients... <HR width={150} />
       </h3>
 
-      {clientData.map((val, index) => {
-        return (
-          <div
-            key={`slide${index}`}
-            className={
-              current === index ? "client__slide active" : "client__slide"
-            }
+      
+          <AnimatePresence initial={false}> 
+            <motion.div
+            variants={slideVariants}
+            animate="visible"
+            initial="hidden"
+            exit="exit"
+            key={current}
+            className={"client__slide active"}
           >
-            {current === index && (
+            
               <div className="clientSlider__content">
                 <div className="client__highlight">
                   <img
                     src="./allImages/Testimonial/Inverted-comma.png"
                     className="inverted--comma"
+                    alt="slide"
                   />
                   <span>
-                    <i>"{val.highlight}"</i>
+                    <i>"{clientData[current].highlight}"</i>
                   </span>
                 </div>
-                <p>{val.comment}</p>
+                <p>{clientData[current].comment}</p>
                 <img
-                  src={val.logo}
+                  src={clientData[current].logo}
                   alt="company logo"
                   className="company--logo"
                 />
               </div>
-            )}
-          </div>
-        );
-      })}
+            
+          </motion.div>
+    </AnimatePresence>
+     
+     
 
       <div className="control--dots">
         <div
-          
           onClick={() => {
             setCurrent(0);
           }}
-          className={current==0?"dot dot--active":"dot"}
+          className={current == 0 ? "dot dot--active" : "dot"}
         ></div>
         <div
-          
           onClick={() => {
             setCurrent(1);
           }}
-          className={current==1?"dot dot--active":"dot"}
+          className={current == 1 ? "dot dot--active" : "dot"}
         ></div>
         <div
-          
           onClick={() => {
             setCurrent(2);
           }}
-          className={current==2?"dot dot--active":"dot"}
+          className={current == 2 ? "dot dot--active" : "dot"}
         ></div>
         <div
-          
           onClick={() => {
             setCurrent(3);
           }}
-          className={current==3?"dot dot--active":"dot"}
+          className={current == 3 ? "dot dot--active" : "dot"}
         ></div>
       </div>
     </div>

@@ -50,11 +50,19 @@
   z-index: 1000;
   box-shadow: 0 0.5em 1em rgba(70, 68, 68, 0.678);
 }
-.mob-bar{
+/* .mob-bar{
   display: flex;
   justify-content: space-between;
   padding: .5rem 1rem;
   align-items: center;
+} */
+
+.app-bar{
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  align-items: center;
+  background-color: white;
 }
 .hamb{
   position: absolute;
@@ -62,7 +70,7 @@
   right: 1em;
   top:1.5em;
 }
-.show-mob-menu{
+/* .show-mob-menu{
   font-size: 18px;
   display: flex;
   position: absolute;
@@ -73,11 +81,11 @@
   height: 100vh;
   width: 100%;
   background-color: var(--main-light);
-}
+} */
 .mob__logo ,
 .show-mob-menu a{
  
-  color:white;
+  color:black;
   text-decoration: none;
   padding: .3rem;
 }

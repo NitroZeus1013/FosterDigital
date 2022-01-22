@@ -6,10 +6,13 @@ import { useInView } from "react-intersection-observer";
 
 const hrVariant = {
     visible:{
-        width:60
+       scale:1,
+       opacity:1,
+       transition:{duration:.5}
     },
     hidden:{
-        width:0
+        scale:.5,
+        opacity:0
     }
 }
 
@@ -19,7 +22,7 @@ function HR({width,color="black"}) {
     const [ref,inView] = useInView();
 
     useEffect(()=>{
-    
+        if(inView)
         control.start('visible')
 
     },[control,inView])

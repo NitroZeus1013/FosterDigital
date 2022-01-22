@@ -1,13 +1,14 @@
 import React from 'react'
 import FAq from './FAq'
-
+import HR from '../utils/HR'
+ 
 function FAQs({faqs}) {
     console.log(faqs)
     return (
         
         <div className="services--faqs">
         <p>FAQs</p>
-        <hr />
+        <HR />
         
         {
             faqs.map((fq,index)=>{

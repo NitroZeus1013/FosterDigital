@@ -1,12 +1,26 @@
-import React from "react";
+import React , {useEffect} from "react";
 import Card from "./Card";
 import Service from "../Services/Service";
-import HR from '../utils/HR';
-
 import { Link,Route,Switch } from "react-router-dom";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 
+import HR from '../utils/HR';
 import "./allCards.css";
+
+const cardVariants = {
+  visible:{
+     scale:1,
+     opacity:1,
+     transition:{duration:.5}
+  },
+  hidden:{
+      scale:.5,
+      opacity:0
+  }
+}
+
 
 const cardData = [
   {
@@ -70,6 +84,14 @@ const cardData = [
 ];
 
 function AllCards() {
+  const control = useAnimation();
+    const [ref,inView] = useInView();
+
+    useEffect(()=>{
+        if(inView)
+        control.start('visible')
+
+    },[control,inView])
 
   const onClickHandler =(path)=>{
 
@@ -77,7 +99,12 @@ function AllCards() {
   return (
     <div className="card--container">
     <h3>Fostering Brands With....<HR width={170}/></h3>
-      <div className="all--cards">
+      <motion.div className="all--cards"
+      animate={control}
+      initial="hidden"
+      variants={cardVariants}
+      ref={ref}
+      >
         {cardData.map((card,index) => {
           return (
            
@@ -96,7 +123,7 @@ function AllCards() {
         
           );
         })}
-      </div>
+      </motion.div>
       <Switch>
      
       </Switch>

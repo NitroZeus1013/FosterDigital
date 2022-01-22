@@ -1,4 +1,5 @@
 import React from "react";
+import HR from '../utils/HR'
 
 function Description({desc,title,image}) {
   
@@ -6,7 +7,7 @@ function Description({desc,title,image}) {
     <div className="services--description">
     
       <p>Why {title} is needed ?</p>
-      <hr />
+      <HR/>
       <div className="content">
         <div className="services__description__image">
           <img src={image?image:"./allImages/SEOEdited.png"} alt="" />

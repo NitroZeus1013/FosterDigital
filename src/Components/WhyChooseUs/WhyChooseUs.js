@@ -1,7 +1,9 @@
 import React from "react";
+
+
+
 import Feature from "./Feature";
 import HR from '../utils/HR';
-
 import "./whyChooseUs.css";
 
 
@@ -35,7 +37,7 @@ const featureData = [
 function WhyChooseUs() {
   return (
     <div className="why--choose-us">
-    <img src="./allImages/why.jpg" alt="background-image" />
+    <img src="./allImages/why.jpg" alt="backgroundImage" />
    <h3>Why Choose Us ?<HR width={150} color={"white"}/></h3>
     <div className="feature--main-container">
        
@@ -46,6 +48,7 @@ function WhyChooseUs() {
             title={feature.title}
             logo={feature.logo}
             content={feature.content}
+            time={index}
           />
         );
       })}

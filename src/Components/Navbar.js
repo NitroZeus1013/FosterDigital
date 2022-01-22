@@ -1,46 +1,45 @@
 import React, { useState } from "react";
-import {
-  Link,
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  useHistory,
-} from "react-router-dom";
+import { Link, Route, Switch, useHistory } from "react-router-dom";
 import About from "./About";
 import Home from "../views/Home";
 
 import Services from "../Components/Services/ServicesContainer";
 
 import styles from "../styles/navbar.module.css";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { CgClose } from "react-icons/cg";
 
-import Box from '@mui/material/Box';
-import { Grid, AppBar } from "@mui/material";
+import Box from "@mui/material/Box";
+import { Grid, AppBar, ListItemButton } from "@mui/material";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import Menu from "@mui/material/Menu";
+// import MenuItem from "@mui/material/MenuItem";
+// import Menu from "@mui/material/Menu";
 
-import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-
-
+import Drawer from "@mui/material/Drawer";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import Collapse from "@mui/material/Collapse";
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
 
 import NotFound from "./NotFound/NotFound";
 import ComingSoon from "./ComingSoon/ComingSoon";
 
 function Navbar() {
+  const [services, setServices] = useState(false);
   const [hambEl, setHambEl] = useState(false);
   const [showDropDrown, setShowDropDown] = useState(false);
   const path = useHistory();
   const open = Boolean(hambEl);
+
+  const handleServicesDropdown = (e) => {
+    e.stopPropagation();
+    setServices(!services);
+  };
 
   const hamburgerMenuHandler = (e) => {
     console.log("clicked");
@@ -72,7 +71,7 @@ function Navbar() {
                   }
                 >
                   <li onClick={dropDrownHandler}>
-                    <Link to="/SEO"> SEO </Link>{" "}
+                    <Link to="/SEO"> SEO </Link>
                   </li>
                   <li onClick={dropDrownHandler}>
                     <Link to="SMM">SMM</Link>
@@ -145,8 +144,10 @@ function Navbar() {
       </nav> */}
 
         <Grid item xs={12} className={styles["mob-nav-bar"]}>
-          <AppBar position="static">
-            <Toolbar>
+          <AppBar 
+          position="static" 
+        >
+            <Toolbar className={styles['app-bar']}>
               <IconButton
                 size="large"
                 edge="start"
@@ -159,9 +160,9 @@ function Navbar() {
                 <MenuIcon />
               </IconButton>
 
-
-
-
+              <IconButton>
+              <Link className={styles["mob__logo"]} to="/" onClick={handleClose}> <img src="./allImages/FDS.png"/></Link>
+              </IconButton>
 
               {/* <Menu
                 id="basic-menu"
@@ -176,31 +177,101 @@ function Navbar() {
                 <MenuItem onClick={handleClose}>Request</MenuItem>
               </Menu> */}
             </Toolbar>
-              
-            <Drawer
-             anchor={"left"}
-             open={hambEl}
-             onClose={handleClose}
-             >
-            <Box sx={{width:250}}>
-            <List>
-              <ListItem>Home </ListItem>
-              <ListItem>Services</ListItem>
-              <ListItem>me</ListItem>
-              <ListItem>about</ListItem>
-
-
-            </List>
-            
-            
-            </Box>
-
-
-            </Drawer>
-
-
-
           </AppBar>
+
+          <Drawer anchor={"left"} open={hambEl} onClose={handleClose}>
+            <Box sx={{ width: 250 }} onClick={handleClose}>
+              <List className={styles["show-mob-menu"]}>
+                <ListItem button key={"about"}>
+                  <ListItemText>
+                    <Link to="/about">About Us</Link>
+                  </ListItemText>
+                </ListItem>
+                <ListItem
+                  button
+                  key={"services"}
+                  onClick={handleServicesDropdown}
+                >
+                  <ListItemText><Link to ="/">Services</Link></ListItemText>
+                  {services ? <ExpandLess /> : <ExpandMore />}
+                </ListItem>
+
+              {/* Services Collapsing menu start */}
+                <Collapse in={services} timeout="auto" unmountOnExit>
+                  <List
+                    onClick={handleClose}
+                    component="div"
+                    disablePadding
+                    sx={{ pl: 4 }}
+                  >
+                    <ListItemButton>
+                      <ListItemText><Link to="/SEO"> SEO </Link></ListItemText>
+                    </ListItemButton>
+                    
+                    <ListItemButton>
+                      <ListItemText><Link to="SMM">SMM</Link></ListItemText>
+                    </ListItemButton>
+
+                    <ListItemButton>
+                      <ListItemText><Link to="/Graphic Designing">Graphic Designing</Link></ListItemText>
+                    </ListItemButton>
+                    <ListItemButton>
+                      <ListItemText><Link to="/Web Development">Web Development</Link></ListItemText>
+                    </ListItemButton>
+                    <ListItemButton>
+                      <ListItemText><Link to="/Website Design">Website Design</Link></ListItemText>
+                    </ListItemButton>
+
+                    <ListItemButton>
+                      <ListItemText><Link to="/App Development">App Developement</Link></ListItemText>
+                    </ListItemButton>
+
+                    
+
+                    <ListItemButton>
+                      <ListItemText> <Link to="/Content writing">Content Writing</Link></ListItemText>
+                    </ListItemButton>
+
+                    <ListItemButton>
+                      <ListItemText><Link to="/Advertising">Advertising</Link></ListItemText>
+                    </ListItemButton>
+
+{/* 
+                    <ListItemButton>
+                      <ListItemText></ListItemText>
+                    </ListItemButton> */}
+                  </List>
+                </Collapse>
+              {/* Services Collapsing menu end */}
+
+                <ListItem button key={"portfolio"}>
+                  <ListItemText>
+                    <Link to="/portfolio">Portfolio</Link>
+                  </ListItemText>
+                </ListItem>
+                <ListItem button key={"blogs"}>
+                  <ListItemText>
+                    <Link to="/blogs">Blogs</Link>
+                  </ListItemText>
+                </ListItem>
+                <ListItem button key={"contact-us"}>
+                  <ListItemText>
+                    <Link to="/contact-us">Contact Us</Link>
+                  </ListItemText>
+                </ListItem>
+                <ListItem button key={"request"}>
+                  <ListItemText>
+                    <a
+                      href="https://calendly.com/foster-digital-services/15-minute-free-consultation-call?month=2021-10"
+                      className={styles.request__quote__btn}
+                    >
+                      Request Quote
+                    </a>
+                  </ListItemText>
+                </ListItem>
+              </List>
+            </Box>
+          </Drawer>
         </Grid>
       </Grid>
 
