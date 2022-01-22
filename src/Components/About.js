@@ -3,6 +3,7 @@ import React ,{useState,useEffect}from "react";
 
 import Footer from "./Footer";
 import "./about.css";
+import HR from "./utils/HR";
 
 const data = {
   quote: {
@@ -36,7 +37,7 @@ function About() {
 
       <div className="services--description">
         <p>Who We Are ?</p>
-        <hr />
+        <HR/>
         <div className="content">
           <div className="services__description__image">
             <img src={data.image ? data.image : "./allImages/SEOEdited.png"} alt="" />
