@@ -1,5 +1,6 @@
-import React from "react";
-import Description from "./Services/Description";
+import React ,{useState,useEffect}from "react";
+
+
 import Footer from "./Footer";
 import "./about.css";
 
@@ -16,6 +17,8 @@ const data = {
 
 function About() {
   
+
+
   return (
     <div>
       <div className="service--hero-image">
